@@ -145,7 +145,7 @@ podman system info
 podman system df
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как подключится к registry?"
 ```shell
 podman logout
 podman login {{ registry-host }}  # a.r.r
@@ -154,13 +154,13 @@ podman login {{ registry-host }}  # a.r.r
 - Сценарий "Как найти нужный образ в registry?"
 Залогиниться браузером по адресу {{ registry-host }}, в поиске найти нужный образ и скопировать полное символьное имя (включая сетевой адрес хоста).
 
-- Сценарий "Как ...?"
+- Сценарий "Как скачать образ и проверить резултат?"
 ```shell
 podman image pull {{ registry-host }}/{{ os-images-path }}/alpine:3.14  # a.r.r/ext-rbru-osimage-docker/alpine:3.14
 podman system df
 ````
 
-- Сценарий "Как ...?"
+- Сценарий "Как запустить контайнер с именнем?"
 ```shell
 podman container run hello
 
@@ -169,7 +169,7 @@ podman container run --name demo -it {{ registry-host }}/{{ os-images-path }}/al
 /# exit 
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как получить информации о развернутых контайнерах и удалить?"
 ```shell
 podman container ls [--all]
 podman container rm demo
